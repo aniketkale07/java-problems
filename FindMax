@@ -1,0 +1,14 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+public class FindMax {
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(3, 5, 9, 2, 8);
+
+        Optional<Integer> max = numbers.stream().reduce(Integer::max);
+
+        max.ifPresent(value -> System.out.println("Max Value: " + value));
+        // Output: Max Value: 9
+    }
+}
